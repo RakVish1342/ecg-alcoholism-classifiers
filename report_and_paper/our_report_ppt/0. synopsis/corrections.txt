@@ -1,0 +1,19 @@
+REPORT:::::
+ECG data from Patient -- for the clock diag
+
+
+PPT:::::
+
+1. add artifacts of ecg slide
+*fuzz due to muscle or epidermis noise or AC power signal interference, wandering baseline
+*interaction with ecg fluid and electrode movement
+*offset potentials and how it masks or takes long to fade 
+*patient movement
+http://24h-monitoring.com/ecg/artifact-sources.html
+http://www.slideshare.net/manishpipra/various-type-o
+http://general-devices.com/rx-for-ecg-artifact/
+
+
+
+
+

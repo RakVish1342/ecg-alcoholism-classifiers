@@ -1,0 +1,8 @@
+list of authors
+justification in intro
+    ecg related to alcoholics
+    HRV and relation to ECG and CHRONIC alcoholics -- diag
+    physiology PNS SNS
+    
+A novel approach for the identification/recognition of chronic alcoholics from ECG signals
+identification/recognition of chronic alcoholics from ECG signals: A novel approach

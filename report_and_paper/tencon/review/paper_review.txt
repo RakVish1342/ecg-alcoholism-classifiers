@@ -1,0 +1,118 @@
+go through the theory of smoothing [6] and [7] 
+
+Understand Dk
+
+Go through other references of intro?
+
+
+Remarks:
+    Nk is the total number of points in the kth section of Dk
+    i in all the formulae (or atleast (6) ) is sample number
+    
+    si = normalized position value, di = vlaue at that position
+    i/N can't be 0
+    
+    n is degree and not order
+    
+    Problem 1 = overall problem not a sub-problem
+    
+    i of (1) not the same as i of (2) -- (1) is position, and (2) is range of nos till degree 'n'
+    
+    
+    Standard cost function or novel?
+    
+    (13) --- w1, w2 ... wk
+    
+    @@@ What is the rank() = rank() statement?? 
+    
+    @@@ matrix > 0 is det(matrix) > 0
+    
+    
+    n >=3 ... why? procedure 1
+    How to decide lambda and W 
+    
+    Notation of B from 11, 12 and 7 .... b(t) = vector of BB curves, just B = matrix/array of b(t)s, B^(n)sub(i) = A particular BB curve
+    
+    Procedure 2 is a prerequisite of procedure 1?
+    
+    p0, p1, p2, etc belong to real nos?
+    
+    expected range for p, epsilon, etc
+    
+    Justification that a stage n>p or E<epsil is actually reached (Procedure 2)
+    
+    Nt ... not Np (conclusion)
+    
+     
+
+Changes:
+
+*   Nk is the total number of points in the kth, si = normalized position value, di = vlaue at that position
+    i/N can't be 0
+    
+xx*   No need to split into Problem 1 and Problem 2 ... Problem 2 is the core/main problem 
+
+*   Mix up in variable notation: i of (1) not the same as i of (2) ---- (1) is position, and (2) is range of nos till degree 'n'
+
+*   Eqn (13) should be: w1, w2 ... wk
+
+*   matrix > 0 is det(matrix) > 0 --- is it a standard practice? 
+
+xx*   Why n >=3 (procedure 1) Not cited any source or justified
+
+*   Nt ... not Np (conclusion)
+
+xx*   Justification that a stage n>p or E<epsil is actually reached (Procedure 2)
+
+  
+    
+Reference:     
+page 17 eqn 62 of: http://www.physics.muni.cz/~jancely/NM/Texty/Numerika/CubicSmoothingSpline.pdf
+
+
+Strong:
+
+*   Relevant depth of info -- BB curves eqns, Cost function, matrix-wise derivation for optimal p
+
+*   Presentation of results -- graphs easy to interpret 
+
+    1. The paper has a well rounded introduction and explanation to familiarize the readers with the areas being covered in the paper. This is seen in the clear explanation of the equations (1-7) which form the base of the Bezier Bernstein curves being used. The requird/necessary steps of derivation connecting the core cost function equation (6) to its equivalent matrix notation (5) and (7-16) was brought out well. The important aspect of there existing of a unique solution for (16) was also included to support the valididty of there always existing a vector of support points 'p'.
+
+    2. The graphs (Fig. 1, 3, 4) included in the paper made it easy to understand the results, as they correlated well with equation (1) by splitting the ECG waveform into three (P, QRS, T) sections with the horizontal axis having values in the range [0, 1] as required by Bezier Burnstien curves and later combining them into a single graph with the horizontal axis having the actual sample numbers. Graphs (Fig. 2) pertaining to the error function were also represented clearly.
+
+        
+Weak:
+
+* x x x x   More citations/backgroud (eg. n>=3)
+    while there was good info on background, more needed to explain technical relevance --- but isnt this obvio...order 1 and two are too low to trace curves??
+    
+*   Results -- How/wrt what does computation complexity decrease
+
+*   Novelty limited ... how exactly? -- obvious method of going stepwise
+
+*   Grammer (egs. ....) and variable notation and proof reading (as above)
+
+    1. The results claim an improvement in the computational efficiency but the experiental study does not support this. The algorithm proposed is not compared with any existing algorithm to show the improvement in computational efficiency nor are any results pertaining to the algorithm's actual computation cost. It would help if more information about the computational cost of the algorithm is provided, and comparitive results with other algorithms is included. 
+    
+    
+    The concluding remarks also state that the model is robust to noise variations. 
+    To show better Robustness apply the same for multiple ECG complexes rather than just one, as noise levels can fluctuate over the course of the ECG capture --- reading more than what's given 
+    [Make this stronger]
+
+    2. The novelty presented in the paper seems limited. There does not seem to be a significantly improved method being derived to calculate the optimal set of control points 'p'. The algorithm still uses a brute force method of cycling through all the possible values of 'n' (the order of the Bezier Bernstein curves) before deciding to pick one that suits the required threshold condition. This seems like a natural approach that one might follow the first time around, and is not a new or necessarily efficient method of ariving at the solution. Also, the use of the the square difference error and conditional error threshold check in Procedure 2, are but standard methods of calculating tollerable variance/deviation  in mathematics.
+    
+    x x x    3. Splitting the paper into sections Problem 1 (of finding the optimal 'p' to trace Dk) and Problem 2 (of obtaining the minimum cost function J with respect to 'p') proved more confusing than helpful. Problem 2 seems to be a sub-problem or a step required to solve Problem 1. Separating these two issues into two sections makes them seem like independent issues and not inter-dependant ones, while in fact Problem 1 iteratively relies on Problem 2. It would be better if the paper is not broken into two pieces under the 'Problem 1' and 'Problem 2' sub-headings.
+    
+    4. There were quite a few mistakes in the formulae and notation. In equation (1), the meaning of the variables si (normalized position), di (amplitude) and Nk (total samples in section 'k') were not mentioned. Also, si can not be equal to zero if 'i' takes values in [1, Nk], thus si belongs to (0, 1] and not [0, 1]. Equation (13) needs to be Wk = diag{w1, w2 ... wk} -- a comma has been used instead of ellipses. In the "IV. Experimental Studies" section, Np has been written a second time while indeed Nt = 155 needs to be used. Furthermore, 'i' in equations (2-4) refers to a counter variable that can range from 1 to order of the Bezier Burnstein  curve 'n', while in equations (1 and 6) 'i' has been used to represent the sample number. This causes a significant amount of notational confusion between sections II and III. Finally, the grammar and sentance construct in the introduction and conclusion could be revised, as some sentences (especially those relating to the novelty/importance of the paper) were cryptic due to grammatical errors and somewhat vague. 
+    
+
+Best Paper Award:
+
+    relevance and timeliness
+    technical content and scientific rigour 
+    novelty and originality
+    quality of presentation
+    
+    
+*  No, I would not recommend this paper for the Best Paper Award. Though there was good investigation of Bezier Bernstein curves and its application to ECG waveforms, little novelty is seen from the paper and only marginal contribution is made to the field.
+

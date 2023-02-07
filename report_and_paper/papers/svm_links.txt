@@ -1,0 +1,9 @@
+Andrew Ng SVM and Simplified SMO:
+http://cs229.stanford.edu/notes/cs229-notes3.pdf
+http://cs229.stanford.edu/materials/smo.pdf
+
+MAchine Learning Course Complete:
+http://cs229.stanford.edu/materials.html
+
+http://www.holehouse.org/mlclass/
+http://www.holehouse.org/mlclass/12_Support_Vector_Machines.html

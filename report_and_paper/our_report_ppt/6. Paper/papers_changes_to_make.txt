@@ -1,0 +1,20 @@
+introduction more description on feature set used etc
+tabular format for all features
+
+relevance of each of the feature types to physiology 
+
+
+iir tried and not so useful
+
+single section of results
+merge all tables of results ... make it a paragrah of explaination
+svm and elm together not separate sections
+no need for confusion matrix. just mention the sensitivity and specificity
+keep the last table of with and without ARX 
+
+
+full summary as one table
+
+
+
+enlarge the wavelet graph, enlarge other graphs also
